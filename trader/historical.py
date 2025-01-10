@@ -1,3 +1,4 @@
+from datetime import datetime
 from enum import Enum
 
 from pydantic import BaseModel
@@ -43,7 +44,7 @@ class Tax(BaseModel):
     fillId: str
     name: TaxType
     quantity: float
-    timeCharged: str
+    timeCharged: datetime
 
 
 class HistoricalOrderRequestDto(BaseModel):
@@ -53,9 +54,9 @@ class HistoricalOrderRequestDto(BaseModel):
 
 
 class HistoricalOrderDto(BaseModel):
-    dateCreated: str
-    dateExecuted: str
-    dateModified: str
+    dateCreated: datetime
+    dateExecuted: datetime
+    dateModified: datetime
     executor: Frontend
     fillCost: float
     fillId: int
@@ -78,7 +79,7 @@ class HistoricalDividendItemDto(BaseModel):
     amount: float
     amountInEuro: float
     grossAmountPerShare: float
-    paidOn: str
+    paidOn: datetime
     quantity: float
     reference: str
     ticker: Ticker
@@ -87,7 +88,7 @@ class HistoricalDividendItemDto(BaseModel):
 
 class HistoricalTransactionItemDto(BaseModel):
     amount: float
-    dateTime: str
+    dateTime: datetime
     reference: str
     type: TransactionType
 
@@ -104,17 +105,17 @@ class ExportDataDto(BaseModel):
     downloadLink: str
     reportId: int
     status: ExportStatus
-    timeFrom: str
-    timeTo: str
+    timeFrom: datetime
+    timeTo: datetime
 
 
 class ExportCsvDto(BaseModel):
     dataIncluded: ReportDataIncluded
-    timeFrom: str
-    timeTo: str
+    timeFrom: datetime
+    timeTo: datetime
 
 
 class TransactionsRequestDto(BaseModel):
     cursor: int
-    time: str
+    time: datetime
     limit: int

@@ -1,3 +1,4 @@
+from datetime import datetime
 from enum import Enum
 
 from pydantic import BaseModel
@@ -30,7 +31,7 @@ class InstrumentType(str, Enum):
 
 
 class TimeEvent(BaseModel):
-    date: str
+    date: datetime
     type: TimeEventType
 
 
@@ -46,7 +47,7 @@ class ExchangeDto(BaseModel):
 
 
 class InstrumentDto(BaseModel):
-    addedOn: str
+    addedOn: datetime
     currencyCode: str
     isin: str
     maxOpenQuantity: int

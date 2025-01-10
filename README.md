@@ -5,6 +5,8 @@ This library provides a Pythonic interface to the T212 API. It ensures consisten
 This library is a work in progress, has not been tested and comes with no warranty.
 
 ## Usage
+API token is automatically pulled from the environment variable `T212_API_TOKEN`.
+
 ```python
 from trader.api import T212Client
 from trader.constants import T212Server

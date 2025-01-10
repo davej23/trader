@@ -1,3 +1,4 @@
+from datetime import datetime
 from enum import Enum
 from typing import Any
 
@@ -75,7 +76,7 @@ class AccountBucketInstrumentResult(BaseModel):
 
 
 class AccountBucketDetailedResponse(BaseModel):
-    creationDate: str
+    creationDate: datetime
     dividendCashAction: DividendCashAction
     endDate: str
     goal: float
@@ -107,7 +108,7 @@ class PieDto(BaseModel):
 
 class CreatePieDto(BaseModel):
     dividendCashAction: DividendCashAction
-    endDate: str
+    endDate: datetime
     goal: float
     icon: str
     instrumentShares: dict[str, Any]

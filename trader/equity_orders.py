@@ -1,6 +1,7 @@
+from datetime import datetime
 from enum import Enum
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from trader.constants import Ticker
 
@@ -37,7 +38,7 @@ class TimeValidity(str, Enum):
 
 
 class EquityOrderDto(BaseModel):
-    creationDate: str
+    creationDate: datetime
     filledQuantity: float
     filledValue: float
     id: int
