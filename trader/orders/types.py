@@ -1,9 +1,16 @@
+"""
+
+Equity Order-related dataclasses
+
+"""
+
+
 from datetime import datetime
 from enum import Enum
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
-from trader.constants import Ticker
+from trader.types import Ticker
 
 
 class EquityOrderStatus(str, Enum):

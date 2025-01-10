@@ -8,9 +8,9 @@ This library is a work in progress, has not been tested and comes with no warran
 API token is automatically pulled from the environment variable `T212_API_TOKEN`.
 
 ```python
-from trader.api import T212Client
-from trader.constants import T212Server
+from trader.client import T212Client
+from trader.types import T212Server
 
 client = T212Client(server=T212Server.DEMO)
-client.get_pies()
+client.pies.get_pies()
 ```

@@ -1,9 +1,15 @@
+"""
+
+Instrument-related dataclasses
+
+"""
+
+
+
 from datetime import datetime
 from enum import Enum
 
 from pydantic import BaseModel
-
-from trader.constants import T212Server, T212ApiToken
 
 
 class TimeEventType(str, Enum):

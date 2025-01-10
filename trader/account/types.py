@@ -1,3 +1,10 @@
+"""
+
+Account-related dataclasses
+
+"""
+
+
 from pydantic import BaseModel
 from pydantic_extra_types.currency_code import Currency
 

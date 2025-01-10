@@ -1,10 +1,13 @@
-from . import api
-from . import account
+"""
+
+T212 Python Client
+
+"""
+
+
+from . import client
 from . import constants
-from . import equity_orders
-from . import instruments
-from . import pies
-from . import portfolio
+from . import types
 
 
 __version__ = "0.0.1"

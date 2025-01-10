@@ -1,3 +1,10 @@
+"""
+
+Pie-related dataclasses
+
+"""
+
+
 from datetime import datetime
 from enum import Enum
 from typing import Any
@@ -36,29 +43,12 @@ class DividendDetails(BaseModel):
     inCash: float
     reinvested: float
 
-    @classmethod
-    def new(cls) -> "DividendDetails":
-        return cls(
-            gained=0.0,
-            inCash=0.0,
-            reinvested=0.0
-        )
-
 
 class InvestmentResult(BaseModel):
     priceAvgInvestedValue: float
     priceAvgResult: float
     priceAvgResultCoef: float
     priceAvgValue: float
-
-    @classmethod
-    def new(cls) -> "InvestmentResult":
-        return cls(
-            priceAvgInvestedValue=0.0,
-            priceAvgResult=0.0,
-            priceAvgResultCoef=0.0,
-            priceAvgValue=0.0
-        )
 
 
 class InstrumentIssue(BaseModel):
@@ -93,17 +83,6 @@ class PieDto(BaseModel):
     progress: float
     result: InvestmentResult
     status: PieStatus
-
-    @classmethod
-    def new(cls) -> "PieDto":
-        return cls(
-            cash=0.0,
-            dividendDetails=DividendDetails.new(),
-            id=-1,
-            progress=0.0,
-            result=InvestmentResult.new(),
-            status=PieStatus.ON_TRACK
-        )
 
 
 class CreatePieDto(BaseModel):

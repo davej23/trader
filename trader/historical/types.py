@@ -1,11 +1,18 @@
+"""
+
+Historical Data-related dataclasses
+
+"""
+
+
 from datetime import datetime
 from enum import Enum
 
 from pydantic import BaseModel
 
-from trader.constants import Ticker
-from trader.equity_orders import EquityOrderStatus
-from trader.portfolio import Frontend
+from trader.types import Ticker
+from trader.orders.types import EquityOrderStatus
+from trader.portfolio.types import Frontend
 
 
 class FillType(str, Enum):

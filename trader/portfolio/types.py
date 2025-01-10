@@ -1,9 +1,16 @@
+"""
+
+Portfolio-related dataclasses
+
+"""
+
+
 from datetime import datetime
 from enum import Enum
 
 from pydantic import BaseModel
 
-from trader.constants import Ticker
+from trader.types import Ticker
 
 
 class Frontend(str, Enum):
