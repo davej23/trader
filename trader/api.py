@@ -23,7 +23,7 @@ from trader.portfolio import PositionDto
 from trader.utils import PaginatedResponse, create_paginated_response
 
 
-class T212Api:
+class T212Client:
     _REQUESTOR: requests.Session = requests.Session()
 
     def __init__(self, server: T212Server = T212Server.DEMO):
